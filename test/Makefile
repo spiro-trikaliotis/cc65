@@ -25,6 +25,8 @@ continue:
 	@$(MAKE) -C standard all
 	@$(MAKE) -C misc all
 	@$(MAKE) -C todo all
+	@$(MAKE) -C standard all
+	@$(MAKE) -C standard/include-identifier all
 
 mostlyclean:
 	@$(MAKE) -C asm clean
@@ -35,6 +37,8 @@ mostlyclean:
 	@$(MAKE) -C standard clean
 	@$(MAKE) -C misc clean
 	@$(MAKE) -C todo clean
+	@$(MAKE) -C standard clean
+	@$(MAKE) -C standard/include-identifier clean
 
 clean: mostlyclean
 	@$(call RMDIR,$(WORKDIR))

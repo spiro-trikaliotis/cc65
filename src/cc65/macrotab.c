@@ -346,7 +346,7 @@ void PrintMacroStats (FILE* F)
             }
             fprintf (F, "\n");
         } else {
-            fprintf (F, "empty\n");
+            fprintf (F, "[empty]\n");
         }
     }
 }
