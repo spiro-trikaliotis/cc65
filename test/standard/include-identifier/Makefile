@@ -66,7 +66,7 @@ define TEST_EMPTY_template
 
 $(WORKDIR)/%.$1._test: %.defaultidentifier $(TESTPRG)
 	$(eval BASE=$$(notdir $$(@:._test=)))
-	@$(WORKDIR)/testidentifier$(EXESUFFIX) "$$(CC65)" "$$<" "" $1 "$$(WORKDIR)"
+	@$(WORKDIR)/testidentifier$(EXESUFFIX) "$$(CC65)" "$$<" "" "$1" "$$(WORKDIR)"
 
 endef # TEST_EMPTY_template
 

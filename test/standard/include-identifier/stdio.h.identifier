@@ -1,0 +1,95 @@
+# format of each line: identifier,type,standard
+# where
+# - identifier: the identifier that should be define
+# - type:       can be a combination of:
+#                 M - must be a macro
+#                 S - must be a symbol (not a macro)
+#                 T - must be a tag (for a struct or union)
+#                 E - must be a struct or union element
+#
+#               if more than one char is given, it can be either of
+#               (for example, 'MS' or 'SM' means that it can be a
+#               symbol OR a macro, but are valid)
+#
+# comment lines (like this one) start with a hash ('#')
+#
+
+
+FILE                ,S ,c89 c99
+fpos_t              ,S ,c89 c99
+NULL                , M,c89 c99
+_IOFBF              , M,c89 c99
+_IOLBF              , M,c89 c99
+_IONBF              , M,c89 c99
+BUFSIZ              , M,c89 c99
+EOF                 , M,c89 c99
+FOPEN_MAX           , M,c89 c99
+FILENAME_MAX        , M,c89 c99
+L_tmpnam            , M,c89 c99
+SEEK_CUR            , M,c89 c99
+SEEK_END            , M,c89 c99
+SEEK_SET            , M,c89 c99
+TMP_MAX             , M,c89 c99
+stderr              , M,c89 c99
+stdin               , M,c89 c99
+stdout              , M,c89 c99
+
+# operations on files
+remove              ,SM,c89 c99
+rename              ,SM,c89 c99
+tmpfile             ,SM,c89 c99
+tmpnam              ,SM,c89 c99
+
+# file access functions
+fclose              ,SM,c89 c99
+fflush              ,SM,c89 c99
+fopen               ,SM,c89 c99
+freopen             ,SM,c89 c99
+setbuf              ,SM,c89 c99
+setvbuf             ,SM,c89 c99
+
+# formatted input/output
+fprintf             ,SM,c89 c99
+fscanf              ,SM,c89 c99
+printf              ,SM,c89 c99
+scanf               ,SM,c89 c99
+snprintf            ,SM,    c99
+sprintf             ,SM,c89 c99
+sscanf              ,SM,c89 c99
+vfprintf            ,SM,c89 c99
+vfscanf             ,SM,    c99
+vprintf             ,SM,c89 c99
+vscanf              ,SM,    c99
+vsnprintf           ,SM,    c99
+vsprintf            ,SM,c89 c99
+vsscanf             ,SM,    c99
+
+# character input/output
+fgetc               ,SM,c89 c99
+fgets               ,SM,c89 c99
+fputc               ,SM,c89 c99
+fputs               ,SM,c89 c99
+getc                ,SM,c89 c99
+getchar             ,S ,c89 c99
+gets                ,S ,c89 c99
+putc                ,SM,c89 c99
+putchar             ,S ,c89 c99
+puts                ,S ,c89 c99
+ungetc              ,S ,c89 c99
+
+# direct input/ouptut
+fread               ,S ,c89 c99
+fwrite              ,S ,c89 c99
+
+# file positioning
+fgetpos             ,S ,c89 c99
+fseek               ,S ,c89 c99
+fsetpos             ,S ,c89 c99
+ftell               ,S ,c89 c99
+rewind              ,S ,c89 c99
+
+# error handling
+clearerr            ,S ,c89 c99
+feof                ,S ,c89 c99
+ferror              ,S ,c89 c99
+perror              ,S ,c89 c99
